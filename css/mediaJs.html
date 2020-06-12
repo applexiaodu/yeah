@@ -1,0 +1,44 @@
+<!--
+ * @Author: yeah
+ * @Date: 2020-06-11 14:24:36
+ * @LastEditTime: 2020-06-11 15:20:52
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \yeah\css\mediaJs.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello world</p>
+</body>
+<style>
+    :root{
+        --primary-color: red;
+    }
+    p{
+        color: var(--primary-color);
+    }
+</style>
+<script>
+    let styles = getComputedStyle(document.documentElement);
+    let value = styles.getPropertyValue("--primary-color"); // 获取样式
+    document.documentElement.style.setProperty("--primary-color", "green"); //重新设置样式
+
+    // style对象定义了一些属性和方法，这些属性和方法在提供元素的style特性值的同时，也可以修改样式。
+    // 虽然style对象能够提供致辞style特性的任何元素的样式信息，但它不包含那些从其他样式表层叠而来并影响到当前元素的样式信息
+    // getPropertyValue(propertyName): 返回给定属性的字符串值
+    // removeProperty(propertyName)：从样式中删除给定属性
+    // setProperty(propertyName, value, priority)：将给定属性设置为相应的值
+
+    // 通过cssText属性可以访问style特性中的css代码，
+    // 在读取模式下，cssText返回浏览器对style特性中的css代码的内部表示；
+    // 在写入模式下，赋给cssText的值会重写整个style特性的值，也就是说，以前通过syule特性指定的样式信息都将丢失。
+
+    // 获取计算的样式使用getComputedStyle()方法，接收两个参数：要取得计算样式的元素和一个伪元素字符串（例如：after）
+</script>
+</html>

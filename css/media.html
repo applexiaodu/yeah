@@ -1,0 +1,33 @@
+<!--
+ * @Author: yeah
+ * @Date: 2020-06-11 14:17:18
+ * @LastEditTime: 2020-06-11 14:20:20
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \yeah\css\media.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<style>
+    /* 通过媒体查询动态秀爱变量然后设置页面的边距 */
+    :root{
+        --gutter: 4px;
+    }
+    section{
+        margin: var(--gutter);
+    }
+    @media (min-width: 600px){
+        :root{
+            --gutter: 16px;
+        }
+    }
+</style>
+</html>
